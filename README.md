@@ -1,3 +1,5 @@
 # AoC 2020
 
-AoC 2020 problems written in [Serenity's](https://github.com/serenityos/serenity) Shell.
+Advent of Code 2020 problems written in [Serenity's](https://github.com/serenityos/serenity) Shell.
+
+Disclaimer: may or may not work inside Serenity :P
