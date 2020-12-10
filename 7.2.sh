@@ -24,7 +24,7 @@ for $rules {
 ans=0
 check="shiny gold/1"
 
-for {
+loop {
     count=${count $check}
     echo $count left, $ans ans, ${count $has} total rules
     if test ${count $check} -eq 0 {

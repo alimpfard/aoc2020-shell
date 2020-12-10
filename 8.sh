@@ -3,7 +3,7 @@ acc=0
 insns=$(cat 8.input)
 seen=()
 
-for {
+loop {
     if test ${count ${filterGlob $ip $seen}} -ne 0 {
         echo reached infinite loop at ip=$ip
         echo $acc

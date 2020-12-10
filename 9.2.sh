@@ -48,7 +48,7 @@ for n in $rest {
     total=$n
     sums=$n
     i=$i_start
-    for {
+    loop {
         if test $total -ge $one {
             break
         }

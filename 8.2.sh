@@ -21,7 +21,7 @@ swap_nj(nip nacc) {
 
 speculate(nip nacc) {
     nseen=($seen)
-    for {
+    loop {
         if test ${count ${filterGlob $nip $nseen}} -ne 0 {
             echo ===============================
             echo ===============================
@@ -58,7 +58,7 @@ speculate(nip nacc) {
 }
 
 
-for {
+loop {
     if swap_nj $ip $acc {
         break
     }
