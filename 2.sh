@@ -3,7 +3,7 @@ for $(cat 2.input) {
     match $it {
         "6-15 n*" { valid=$(expr $valid + 1) }
         "*-* ?: *" as (min max letter passw) {
-            replaced=${regexReplace "[^$letter]" '' $passw}
+            replaced=${regex_replace "[^$letter]" '' $passw}
             count=${length $replaced}
             if test \( $count -le $max \) -a \( $count -ge $min \) {
                 valid=$(expr $valid + 1)

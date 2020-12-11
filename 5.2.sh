@@ -1,8 +1,8 @@
 js=serenity-js
 
 read_one(input) {
-  seat=${regexReplace 'F|L' 0 $input}
-  seat=${regexReplace 'B|R' 1 $seat}
+  seat=${regex_replace 'F|L' 0 $input}
+  seat=${regex_replace 'B|R' 1 $seat}
   seat=0b$seat
   value=${nth 0 $(echo "console.log($seat)" | $js)}
   echo $value

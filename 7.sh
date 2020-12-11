@@ -37,7 +37,7 @@ loop {
     for $has {
         match $it {
             */*/* as (color count bag) {
-                if test ${count ${filterGlob $color $seen}} -eq 0 {
+                if test ${count ${filter_glob $color $seen}} -eq 0 {
                     if test $current = $bag {
                         check=($check $color)
                     }

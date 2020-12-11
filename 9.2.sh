@@ -7,7 +7,7 @@ no_previous_factors_for(num) {
     ok=true
     for n in $preamble {
         pair=$(expr $num - $n)
-        if test ${count ${filterGlob $pair $preamble}} -ne 0 && \
+        if test ${count ${filter_glob $pair $preamble}} -ne 0 && \
            test $pair -ne $n {
             echo $num - $n = $pair
             ok=false

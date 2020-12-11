@@ -35,7 +35,7 @@ test_hgt() {
     }
 }
 test_hcl() {
-    match ($hcl ${regexReplace '^#[0-9a-f]{6}' '' $hcl}) {
+    match ($hcl ${regex_replace '^#[0-9a-f]{6}' '' $hcl}) {
         ('' '') { false }
         (* '') { true }
         (* *) { false }
@@ -49,7 +49,7 @@ test_ecl() {
     }
 }
 test_pid() {
-    match ($pid ${regexReplace '^\d{9}' '' $pid}) {
+    match ($pid ${regex_replace '^\d{9}' '' $pid}) {
         ('' '') { false }
         (* '') { true }
         (* *) { false }

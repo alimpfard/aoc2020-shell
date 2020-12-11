@@ -4,7 +4,7 @@ insns=$(cat 8.input)
 seen=()
 
 loop {
-    if test ${count ${filterGlob $ip $seen}} -ne 0 {
+    if test ${count ${filter_glob $ip $seen}} -ne 0 {
         echo reached infinite loop at ip=$ip
         echo $acc
         exit

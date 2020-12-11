@@ -22,7 +22,7 @@ swap_nj(nip nacc) {
 speculate(nip nacc) {
     nseen=($seen)
     loop {
-        if test ${count ${filterGlob $nip $nseen}} -ne 0 {
+        if test ${count ${filter_glob $nip $nseen}} -ne 0 {
             echo ===============================
             echo ===============================
             echo reached infinite loop at nip=$nip
@@ -63,7 +63,7 @@ loop {
         break
     }
 
-    if test ${count ${filterGlob $ip $seen}} -ne 0 {
+    if test ${count ${filter_glob $ip $seen}} -ne 0 {
         echo ===============================
         echo reached infinite loop at ip=$ip
         echo $acc
